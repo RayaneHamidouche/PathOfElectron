@@ -1,0 +1,61 @@
+import matplotlib.pyplot as plt
+import math
+from operator import add
+
+electronmass = 9.109 * 10**(-31)
+electroncharge = -1.602 * 10**(-19)
+k = 8.9875517923e9
+position= []
+velocity= []
+coordinates = []
+UnitVector = []
+Acceleration=[]
+Force=[]
+modulus=0
+
+position.append(float(input("Enter initial x-coordinate of electron: ")))
+position.append(float(input("Enter initial y-coordinate of electron: ")))
+velocity.append(float(input("Enter initial x-velocity of electron: ")))
+velocity.append(float(input("Enter initial y-velocity of electron: ")))
+
+def CoulombsLaw(position):
+    r=math.sqrt((position[0]**2)+(position[1]**2))
+
+    F = k*((electroncharge)**2)/(r**2)
+
+    return F
+
+
+
+
+
+for i in range(100000):
+    modulus=math.sqrt(position[0]**2 + position[1]**2)
+    UnitVector=[position[0]/modulus,position[1]/modulus]
+    Force=[x*CoulombsLaw(position) for x in UnitVector]
+    Acceleration=[x/electronmass for x in Force]
+    velocity = list( map(add, velocity, [x*5e-18 for x in Acceleration]))
+    position = list( map(add, position, [x*5e-18 for x in velocity]))
+
+
+    
+
+
+
+    coordinates.append([position[0],position[1]])
+
+    
+
+
+
+xs=[x[0] for x in coordinates]
+ys=[y[1] for y in coordinates]
+
+
+
+plt.scatter(0, 0, s=10, color='red')
+plt.plot(xs,ys)
+plt.axis('equal')
+plt.show()
+
+
