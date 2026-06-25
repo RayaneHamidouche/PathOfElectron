@@ -46,7 +46,4 @@ vy = 0
 
 * Multiple interacting particles
 * Electric field visualisation
-* RK4 or Verlet integration
-* Energy conservation checks
-* Trajectory animation
-* Machine learning trajectory prediction
+* Simulation in three dimensions
