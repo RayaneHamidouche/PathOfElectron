@@ -21,7 +21,7 @@ a = F/m
 
 The electron's position and velocity are updated using the Euler method.
 
-##Trajectory outputs
+## Trajectory outputs
 
 <img width="460" height="375" alt="image" src="https://github.com/user-attachments/assets/8506312b-8ae5-4441-95ea-0dc2ef4f18dd" />
 
