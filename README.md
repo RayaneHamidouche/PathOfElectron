@@ -20,6 +20,16 @@ The resulting acceleration is calculated using Newton's Second Law:
 a = F/m
 
 The electron's position and velocity are updated using the Euler method.
+##Trajectory outputs
+
+<img width="461" height="375" alt="image" src="https://github.com/user-attachments/assets/8506312b-8ae5-4441-95ea-0dc2ef4f18dd" />
+
+<img width="482" height="390" alt="image" src="https://github.com/user-attachments/assets/b1f5a31a-9501-437f-a91b-51dfd9ad9a95" />
+
+
+
+
+
 
 ## Requirements
 
